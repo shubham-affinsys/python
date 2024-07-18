@@ -37,5 +37,44 @@ dict.popItem()  --> removes specified key val pair
 dict.setdefaults(key,default="None") set key to default value if key is not specified
 dict.has_key(key)  returns true if dict has the key
 
-"""
 
+#classes
+
+class Myclass:
+    def __init__(self,name,age): 
+        self.name=name
+        self.age=age
+    def __str__(self): #prints the object as string no need to call the fn
+        return f"{self.name} {self.age}"
+
+c=Myclass("shubh",20)
+# print(c.name,c.age)
+
+print(c) #print the object __str__ used
+
+
+delete obj property : del c.age
+delete obj : del c
+
+
+
+"""
+#inheritance
+
+class Person:
+    def __init__(self,fname,lname):
+        self.firstname=fname
+        self.lastname=lname
+
+    def printname(self):
+        print(self.firstname,self.lastname)
+
+p = Person("John","Doe")
+p.printname()
+
+
+class Student(Person):
+    pass
+
+s = Student("shubh","chauhan")
+s.printname() #inherited method
