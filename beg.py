@@ -58,7 +58,6 @@ delete obj : del c
 
 
 
-"""
 #inheritance
 
 class Person:
@@ -68,13 +67,82 @@ class Person:
 
     def printname(self):
         print(self.firstname,self.lastname)
+    def __str__(self):
+        return f"{self.firstname} {self.lastname}"
 
 p = Person("John","Doe")
 p.printname()
 
 
 class Student(Person):
-    pass
+    def __init__(self,fname,lname,graduated):
+        # Person.__init__(self,fname,lname) or use super()
+        super().__init__(fname,lname)
+        self.graduated = graduated
+    
+    def welcome(self):
+        print("welcome",self.firstname,self.lastname,"to class of",self.graduated)
+    def __str__(self):
+        return super().__str__()+f" of class {self.graduated}"
 
-s = Student("shubh","chauhan")
-s.printname() #inherited method
+s = Student("shubh","chauhan",2025)
+s.printname()
+s.welcome()
+print(s)
+
+class Person:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def display(self):
+        return f"Name : {self.name} Age : {self.age}"
+
+class Employee(Person):
+    def __init__(self,name,age,id,dept):
+        super().__init__(name,age)
+        self.id=id
+        self.dept=dept
+    def display(self):
+        print(super().display(),f"id : {self.id} dept : {self.dept}")
+
+class Student(Person):
+    def __init__(self,name,age,id,dob):
+        super().__init__(name,age)
+        self.id=id
+        self.dob=dob
+    def display(self):
+        print(super().display(), f"id : {self.id} DOB : {self.dob}")
+
+
+
+e = Employee("shubh",20,101,"SE")
+e.display()
+
+s = Student("Amit",20,102,2003)
+s.display()
+
+
+# default values in function parameters
+
+class Student:
+    cur_id=0 # it is a class variable so need to be accesses as cls.cur_id
+
+    @classmethod  # then we dont need to pass cls
+    def get_id(cls):
+        cls.cur_id+=1
+        return cls.cur_id
+    
+    def __init__(self,name="guest"): # guest is default for name if not given
+        self.name=name
+        self.id = Student.get_id()
+    def __str__(self):
+        return f"{self.name} {self.id}"
+    
+s = Student("shubham")
+c = Student("Amit")
+d = Student()
+
+print(s,c,d)
+
+
+"""
