@@ -1,3 +1,4 @@
+"""
 import os
 print(os.getcwd())
 dirs = os.listdir()
@@ -74,7 +75,7 @@ print(time.ctime())
 
 
 #file io
-"""
+
 character	purpose
 r	Opens a file for reading only. (default)
 w	Opens a file for writing only, deleting earlier contents
@@ -83,10 +84,45 @@ t	opens file in text format (default)
 b	Opens a file in binary format.
 +	Opens a file for simultaneous reading and writing.
 x	opens file for exclusive creation.
+
+
+
+f = open("input.txt","rb")
+print(f.readlines())
+f.close()
+
+f = open("input.txt","wb")
+f.write(int.to_bytes(1024,16,"big"))
+print(f.closed)
+print(f.mode)
+print(f.name)
+
+
 """
 
+#csv
+import csv
 
-f = open("input.txt","r")
-f.read(5)
-# f.write("my new data")
-f.close()
+#crete and write in csv
+marks = [('shubh',20,100),('Abh',29,70),('mike',92,2)]
+csvfile = open('marks.csv','w',newline='')
+obj = csv.writer(csvfile)
+for row in marks:
+    obj.writerow(row)
+csvfile.close()
+
+
+#read from csv
+csvfile = open('marks.csv','r',newline='')
+obj = csv.reader(csvfile)
+for row in obj:
+    print(row)
+
+while True:
+    try:
+        row=next(obj)
+        print(row)
+    except StopIteration:
+        break
+
+
