@@ -1,5 +1,8 @@
 import requests
+import translator
+import re
 
+pattern = r'^[a-zA-Z0-9\s.,?!\'"-]+$'
 def get_cat_fact(count):
     url=f"https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount={count}"
     response = requests.get(url)
@@ -8,7 +11,13 @@ def get_cat_fact(count):
         data = response.json()
         ls=[]
         for fact in data:
-            ls.append(fact['text'])
+            fact_is = fact['text']
+            if re.fullmatch(pattern, fact_is):
+                ls.append(fact_is)
+            else:
+                transalated = translator.translate_to_eng(fact_is)
+                ls.append(transalated)
+            # ls.append(fact_is)
         return ls
     else:
         return f"Error : {response.status_code}"
