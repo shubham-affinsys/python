@@ -29,7 +29,7 @@ screen.setworldcoordinates(-180,-90,180,90)
 
 screen.bgpic("/home/shubham/work/python/images/map.gif")
 screen.register_shape("/home/shubham/work/python/images/iss.gif")
-iss = turtle.Turtle(45)
+iss = turtle.Turtle()
 
 iss.shape("/home/shubham/work/python/images/iss.gif")
 iss.setheading(45)
@@ -50,4 +50,4 @@ while True:
     print("\nLongitude: "+str(lon))
 
     iss.goto(lon,lat)
-    time.sleep(5)
+    time.sleep(2)
