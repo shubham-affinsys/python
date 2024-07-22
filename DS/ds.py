@@ -68,3 +68,13 @@ import pprint #prety print
 pprint.pprint(mypets)
 
 print(pprint.pformat(mypets))
+
+
+
+
+mydict = {"shubh":10,"ravi":40,"sanjeev":30}
+mykeys = list(mydict.keys())
+mykeys.sort()
+mykeys.reverse()
+sorted_dict={i:mydict[i] for i in mykeys}
+print(sorted_dict)

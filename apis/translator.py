@@ -4,7 +4,7 @@ import requests
 def translate_to_eng(data):
     url="https://libretranslate.com/translate"
     payload = {
-        "q": data,
+        "q": {data},
         "source": "auto",  # Auto-detect the source language
         "target": "en",    # Target language is English
         "format": "text"

@@ -35,7 +35,7 @@ dict values  -->  returns list of all values of dict
 dict.pop()  --> removes element with specified key
 dict.popItem()  --> removes specified key val pair
 dict.setdefaults(key,default="None") set key to default value if key is not specified
-dict.has_key(key)  returns true if dict has the key
+dict.has_key(key)   if dict has the key
 
 
 #classes

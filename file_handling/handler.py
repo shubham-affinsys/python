@@ -52,7 +52,7 @@ f.write(" new line")
 f.close
 
 import shelve
-mysheleve = shelve.opne("my_stored_data_file")
+mysheleve = shelve.open("my_stored_data_file")
 new_setting = ["item2","resource3"]
 
 mysheleve["settings"]=new_setting
