@@ -7,7 +7,7 @@ choics=["apple","mango","tomato"]
 choice = inp.inputChoice(prompt=f"make a choice -> \n{','.join(choics)}:\n",choices=["mango","apple"])
 menu = inp.inputMenu(prompt="choose from menu \n",choices=choics)
 # date_time = inp.inputDatetime(prompt="enter date",formats=["%m/%d/%Y ","%H:%M:%S"])
-yes_no = inp.inputYesNo(prompt="want to proceed further y for si and n for no \n",yesVal="si",noVal="no")
+yes_no = inp.inputYesNo(prompt="want to proceed further si for yes and n for no \n",yesVal="si",noVal="no")
 bol = inp.inputBool(prompt="type true or false ")
 eml = inp.inputEmail("enter your email ")
 pth = inp.inputFilepath("enter file path ")

@@ -7,7 +7,7 @@
 # shutil.copytree("/folder","backup_folder") #copy folder to other
 
 # #move folder
-# shutil.move("src","est")
+# shutil.move("src","dest")
 
 # #delete folder
 # os.unlink("path to file")

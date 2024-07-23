@@ -33,7 +33,6 @@ def read_root():
         print("error occured")
         return {"error :":str(e)}
 
-
 @app.get("/emps/{emp_id}")
 def read_data(emp_id:int):
     try:
