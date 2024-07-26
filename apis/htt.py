@@ -1,5 +1,5 @@
 import requests
-"""
+
 #get
 url = "https://jsonplaceholder.typicode.com/posts/1"
 response = requests.get(url)
@@ -30,7 +30,6 @@ post_response = requests.post(url_post,json=new_data)
 post_response_json = post_response.json()
 print(post_response_json)
 
-"""
 
 #auth
 from requests.auth import HTTPBasicAuth
