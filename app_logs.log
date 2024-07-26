@@ -1,0 +1,27 @@
+2024-07-26 11:29 - DEBUG - This isa debug msg
+2024-07-26 11:29 - INFO - this is info msg
+2024-07-26 11:29 - WARNING - thsi is a warnnig msg
+2024-07-26 11:29 - ERROR - this is an eror msg
+2024-07-26 11:29 - CRITICAL - this is critical msg
+2024-07-26 11:29 - DEBUG - name='shubh'
+2024-07-26 11:29 - ERROR - An exception occured
+Traceback (most recent call last):
+  File "/home/shubham/work/python/logging/log_demo.py", line 41, in <module>
+    1/0
+ZeroDivisionError: division by zero
+2024-07-26 11:30 - DEBUG - This isa debug msg
+2024-07-26 11:30 - INFO - this is info msg
+2024-07-26 11:30 - WARNING - thsi is a warnnig msg
+2024-07-26 11:30 - ERROR - this is an eror msg
+2024-07-26 11:30 - CRITICAL - this is critical msg
+2024-07-26 11:30 - DEBUG - name='shubh'
+2024-07-26 11:30 - ERROR - An exception occured
+Traceback (most recent call last):
+  File "/home/shubham/work/python/logging/log_demo.py", line 41, in <module>
+    1/0
+
+2024-07-26 11:30 - ERROR - An error occured in calculation
+Traceback (most recent call last):
+  File "/home/shubham/work/python/logging/log_demo.py", line 41, in <module>
+    1/0
+
