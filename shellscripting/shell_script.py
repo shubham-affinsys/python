@@ -21,11 +21,11 @@ import subprocess
 # subprocess.run(["echo", "hi"])
 
 
-subprocess.run(['echo',"-ne","starting program"])
+subprocess.run(['echo', "-ne", "starting program"])
 
 for i in range(4):
     subprocess.run(["bash", "-c", "sleep 1"])
     subprocess.run(["echo", "-ne", "."])
 subprocess.run(["echo"])
 
-subprocess.run(["bash","-c","python3 shell_progess.py"])
+subprocess.run(["bash", "-c", "python3 shell_progess.py"])

@@ -45,5 +45,5 @@ class AutoClose:
     def __exit__(self,exc_type,exception,traceback):
         self.f.close()
 
-with AutoClose("/my_files/f.txt") as f:
-    print(f.read())
+# with AutoClose("/my_files/f.txt") as f:
+#     print(f.read())

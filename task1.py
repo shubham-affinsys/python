@@ -56,6 +56,6 @@ def give_all_occurences(key,data):
         for i in data:
             give_all_occurences(key,i)
     if data==key:
-        pprint(data)
+        pprint.pprint(data)
 
 give_all_occurences("a",data)
